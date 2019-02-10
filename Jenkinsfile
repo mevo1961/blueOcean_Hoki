@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Where am I') {
       steps {
-        pwd(tmp: true)
+        pwd()
       }
     }
   }
