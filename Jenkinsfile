@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Where am I') {
       steps {
-        dir(path: '/home/meinolf/Workspace') {
+        dir(path: '/tmp/mevo') {
           sh 'pwd'
         }
 
