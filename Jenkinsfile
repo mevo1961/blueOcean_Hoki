@@ -6,9 +6,9 @@ pipeline {
         sh 'date'
       }
     }
-    stage('Send mail') {
+    stage('Where am I') {
       steps {
-        mail(subject: 'Blu Ocean', body: 'Blue Ocean step Mail has been executed successfully', from: 'jenkins@home', to: 'mevo1961@gmail.com')
+        pwd(tmp: true)
       }
     }
   }
