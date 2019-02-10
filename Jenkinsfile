@@ -12,7 +12,6 @@ pipeline {
           sh 'pwd'
         }
 
-        sh 'pwd'
       }
     }
   }
