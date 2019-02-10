@@ -26,5 +26,10 @@ pipeline {
 
       }
     }
+    stage('') {
+      steps {
+        sh 'pwd'
+      }
+    }
   }
 }
