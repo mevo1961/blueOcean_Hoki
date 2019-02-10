@@ -19,11 +19,20 @@ pipeline {
       }
     }
     stage('Where am I') {
-      steps {
-        dir(path: '/tmp/mevo') {
-          sh 'pwd'
-        }
+      parallel {
+        stage('Where am I') {
+          steps {
+            dir(path: '/tmp/mevo') {
+              sh 'pwd'
+            }
 
+          }
+        }
+        stage('') {
+          steps {
+            sh 'date'
+          }
+        }
       }
     }
   }
