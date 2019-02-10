@@ -8,9 +8,12 @@ pipeline {
             sh 'date'
           }
         }
-        stage('') {
+        stage('error') {
           steps {
-            timestamps()
+            timestamps() {
+              sh 'date'
+            }
+
           }
         }
       }
