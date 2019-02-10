@@ -28,7 +28,7 @@ pipeline {
     }
     stage('Send Mail') {
       steps {
-        mail(subject: 'Test email', body: 'This is a test in Jenkins Blue Ocean', from: 'jenkins@gmail.com', to: 'mevo1961@gmail.com')
+        mail(subject: 'Test email', body: 'This is a test in Jenkins Blue Ocean', to: 'mevo1961@gmail.com')
       }
     }
   }
