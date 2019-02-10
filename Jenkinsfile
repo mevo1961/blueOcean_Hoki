@@ -28,9 +28,9 @@ pipeline {
 
           }
         }
-        stage('') {
+        stage('error') {
           steps {
-            sh 'date'
+            build(job: 'Test_Job', wait: true)
           }
         }
       }
