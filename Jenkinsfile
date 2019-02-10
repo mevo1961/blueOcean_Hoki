@@ -2,8 +2,17 @@ pipeline {
   agent any
   stages {
     stage('Date') {
-      steps {
-        sh 'date'
+      parallel {
+        stage('Date') {
+          steps {
+            sh 'date'
+          }
+        }
+        stage('') {
+          steps {
+            timestamps()
+          }
+        }
       }
     }
     stage('Where am I') {
