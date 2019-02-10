@@ -19,20 +19,11 @@ pipeline {
       }
     }
     stage('Where am I') {
-      parallel {
-        stage('Where am I') {
-          steps {
-            dir(path: '/tmp/mevo') {
-              sh 'pwd'
-            }
+      steps {
+        dir(path: '/tmp/mevo') {
+          sh 'pwd'
+        }
 
-          }
-        }
-        stage('error') {
-          steps {
-            build(job: 'Test_Job', wait: true)
-          }
-        }
       }
     }
   }
