@@ -8,7 +8,8 @@ pipeline {
     }
     stage('Where am I') {
       steps {
-        pwd()
+        dir(path: '/home/meinolf/Workspace')
+        sh 'pwd'
       }
     }
   }
