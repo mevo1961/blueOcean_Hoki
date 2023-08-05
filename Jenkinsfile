@@ -8,6 +8,7 @@ pipeline {
             sh 'date'
           }
         }
+
         stage('error') {
           steps {
             timestamps() {
@@ -16,15 +17,29 @@ pipeline {
 
           }
         }
+
       }
     }
+
     stage('Where am I') {
-      steps {
-        dir(path: '/tmp/mevo') {
-          sh 'pwd'
+      parallel {
+        stage('Where am I') {
+          steps {
+            dir(path: '/tmp/mevo') {
+              sh 'pwd'
+            }
+
+          }
+        }
+
+        stage('Hello') {
+          steps {
+            sh 'echo \'Hello, world\''
+          }
         }
 
       }
     }
+
   }
 }
